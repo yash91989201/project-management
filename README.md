@@ -1,5 +1,5 @@
 
-# Graph Conn
+# project management
 
 A simple project management app made using 
 graphql and Apollo client , made for the purposes of learning about 
