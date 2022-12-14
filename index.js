@@ -20,13 +20,6 @@ app.use(
   })
 );
 
-// if (process.env.NODE_ENV === "production") {
-//   app.use(express.static("client/build"));
-//   app.get("*", (req, res) => {
-//     res.sendFile(__dirname, "client", "build", "index.html");
-//   });
-// }
-
 app.listen(PORT, (err) => {
   console.log(err || `Server running on PORT:${PORT}`);
 });
