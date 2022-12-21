@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+
+  nginx:
+    ports:
+      - 80:80
+
+  api:
+    build:
+      args:
+        - NODE_ENV=production
+    command: npm start
+
+  client:
+    build:
+      args:
+        - NODE_ENV=production
+    command: [ "/bin/sh", "-c", "npm run build;serve -s build" ]

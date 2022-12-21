@@ -1,9 +1,7 @@
 const mongoose = require("mongoose");
 
-const MONGODB_URI = process.env.MONGODB_URI;
-
 const connectDB = async () => {
-  const conn = await mongoose.connect(MONGODB_URI);
+  const conn = await mongoose.connect("mongodb://mongo:27017/project_mgmt");
   console.log(
     `Connected to db at PORT:${conn.connection.port}`.bgCyan.underline.bold
   );
